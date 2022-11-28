@@ -15,9 +15,13 @@ public class Program {
 		Seller seller = sellerDao.findById(3);
 		System.out.println(seller);
 
-		System.out.println("2nd test: seller - findByDepartment");
+		System.out.println("\n2nd test: seller - findByDepartment");
 		Department department = new Department(2, null);
 		List<Seller> list = sellerDao.findByDepartment(department);
+		list.forEach(System.out::println);
+
+		System.out.println("\n3rd test: seller - findAll");
+		list = sellerDao.findAll();
 		list.forEach(System.out::println);
 	}
 }
