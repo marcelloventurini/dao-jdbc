@@ -45,8 +45,8 @@ public class Program {
 		System.out.println("\nDeparment tests");
 
 		System.out.println("\n1st test: department - findById");
-		Department department1 = departmentDao.findById(1);
-		System.out.println(department1);
+		Department department = departmentDao.findById(1);
+		System.out.println(department);
 
 		System.out.println("\n2nd test: department - findAll");
 		List<Department> list = departmentDao.findAll();
@@ -56,5 +56,11 @@ public class Program {
 		Department newDepartment = new Department(null, "Story");
 		departmentDao.insert(newDepartment);
 		System.out.println("Success. New id: " + newDepartment.getId());
+
+		System.out.println("\n4th test: department - update");
+		department = departmentDao.findById(6);
+		department.setName("Comics");
+		departmentDao.update(department);
+		System.out.println("Update completed.");
 	}
 }
