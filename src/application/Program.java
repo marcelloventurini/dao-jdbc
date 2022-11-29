@@ -48,6 +48,8 @@ public class Program {
 		Department department1 = departmentDao.findById(1);
 		System.out.println(department1);
 
-
+		System.out.println("\n2nd test: department - findAll");
+		List<Department> list = departmentDao.findAll();
+		list.forEach(System.out::println);
 	}
 }
