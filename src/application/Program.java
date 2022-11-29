@@ -62,5 +62,9 @@ public class Program {
 		department.setName("Comics");
 		departmentDao.update(department);
 		System.out.println("Update completed.");
+
+		System.out.println("\n5th test: department - delete");
+		departmentDao.deleteById(5);
+		System.out.println("Delete completed.");
 	}
 }
