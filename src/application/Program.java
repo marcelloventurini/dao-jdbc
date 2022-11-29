@@ -51,5 +51,10 @@ public class Program {
 		System.out.println("\n2nd test: department - findAll");
 		List<Department> list = departmentDao.findAll();
 		list.forEach(System.out::println);
+
+		System.out.println("\n3rd test: department - insert");
+		Department newDepartment = new Department(null, "Story");
+		departmentDao.insert(newDepartment);
+		System.out.println("Success. New id: " + newDepartment.getId());
 	}
 }
