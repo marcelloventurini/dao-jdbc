@@ -39,5 +39,9 @@ public class Program {
 		System.out.println("\n6th test: seller - update");
 		sellerDao.deleteById(16);
 		System.out.println("Delete completed.");
+
+		System.out.println("\nDeparment tests");
+
+		System.out.println("\n1st test: department - findById");
 	}
 }
